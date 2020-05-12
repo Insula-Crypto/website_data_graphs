@@ -18,7 +18,7 @@ jobs:
         packages: |
           requests
           pandas
-    - run: python funds_roi_graph.py
+    - run: python data_graphs.py
     
     - run: |
         git config --local user.email "action@github.com"
