@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime 
 
 def ISLAPool():
-    sent = requests.get('https://api.bloxy.info/token/token_holders_list?token=0x3cccaf9826f23fa749a85644f4924e627405f338&key=ACCunOMWYpmCp&format=table').json()
+    sent = requests.get('https://api.bloxy.info/token/token_holders_list?token=0x3203d789bfdB222bfdd629B8de7C5Dc38e8241eC&key=ACCunOMWYpmCp&format=table').json()
     df = pd.DataFrame(sent)
     df.rename(columns={0:'Token Holder', 2:'Balance'}, inplace=True)
     df['Token Holder'] = df['Token Holder'].str[:5]
